@@ -6,7 +6,8 @@ define([
   'jquery',
   'backbone',
   'underscore',
-  'components/pollable_collection'
+  'components/pollable_collection',
+  'chronos'
 ], function($,
             Backbone,
             _,
@@ -89,7 +90,7 @@ define([
   JobPathModel = CSVModel.extend({});
 
   JobGraph = Backbone.Collection.extend(_.extend({}, Pollable, {
-    url: 'scheduler/graph/csv',
+    url: api.url + '/scheduler/graph/csv',
     //url: '/stubs/graph.csv',
 
     parse: function(response, options) {

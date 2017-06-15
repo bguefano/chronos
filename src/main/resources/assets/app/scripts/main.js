@@ -125,7 +125,8 @@ require([
   'collections/job_graph',
   'parsers/iso8601',
   'components/configured_rivets',
-  'jquery/fastLiveFilter'
+  'jquery/fastLiveFilter',
+  'chronos'
 ],
 function($,
          _,

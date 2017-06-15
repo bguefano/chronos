@@ -5,7 +5,8 @@
 define([
   'underscore',
   'collections/base_jobs',
-  'components/pollable_collection'
+  'components/pollable_collection',
+  'chronos'
 ], function(_,
             BaseJobsCollection,
             Pollable) {
@@ -13,7 +14,7 @@ define([
   var JobsCollection;
 
   JobsCollection = BaseJobsCollection.extend(_.extend({}, Pollable, {
-    url: 'scheduler/jobs'
+    url: api.url + '/scheduler/jobs'
     //url: '/stubs/jobs.json'
   }));
 
